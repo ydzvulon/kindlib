@@ -33,3 +33,10 @@ tasks:
     desc: _
     cmds:
       - task: init-kind
+
+  setup-kind:
+    desc: _
+    vars:
+      DIMG: python:3.4-alpine
+    cmds:
+      - kind load docker-image  {{.DIMG}} {{.DIMG}}
