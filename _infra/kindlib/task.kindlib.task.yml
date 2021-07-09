@@ -23,3 +23,13 @@ tasks:
     desc: _
     cmds:
       - task: install-kind
+
+  init-kind:
+    desc: _
+    cmds:
+      - kind create cluster -v 1
+
+  init:
+    desc: _
+    cmds:
+      - task: init-kind

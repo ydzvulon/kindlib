@@ -14,13 +14,11 @@ tasks:
       - echo "{{.GREETING}}"
       - task -l
     silent: true
-
-  install/kindlib-dyn:
-    desc: install kindlib requirements
-    cmds:
-      - task kindlib:install -d _infra/kindlib
-
-  install/kindlib-sta:
-    desc: install kindlib requirements
-    cmds:
-      - task: kindlib:install
+  # install/kindlib-dyn:
+  #   desc: install kindlib requirements
+  #   cmds:
+  #     - task kindlib:install -d _infra/kindlib
+  # install/kindlib-sta:
+  #   desc: install kindlib requirements
+  #   cmds:
+  #     - task: kindlib:install
