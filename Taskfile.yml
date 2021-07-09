@@ -5,6 +5,9 @@ version: "3"
 vars:
   GREETING: Kindlib Repo Root
 
+includes:
+  kindlib: _infra/kindlib/task.kindlib.task.yml
+
 tasks:
   default:
     cmds:
@@ -12,7 +15,12 @@ tasks:
       - task -l
     silent: true
 
-  init-boot:
-    desc: _
+  install/kindlib-dyn:
+    desc: install kindlib requirements
     cmds:
-      - task install -d _infra/kindlib
+      - task kindlib:install -d _infra/kindlib
+
+  install/kindlib-sta:
+    desc: install kindlib requirements
+    cmds:
+      - task: kindlib:install
